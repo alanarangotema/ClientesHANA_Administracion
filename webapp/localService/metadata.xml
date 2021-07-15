@@ -1,0 +1,70 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZSCP_PORTAL_CLIENTES_HANA_SRV" xml:lang="es" sap:schema-version="1">
+			<EntityType Name="ReadPdfServer" sap:content-version="1">
+				<Key><PropertyRef Name="Nombre"/><PropertyRef Name="Pais"/></Key><Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Pais" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="EPdf" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GetUser" sap:content-version="1">
+				<Key><PropertyRef Name="ILand1"/><PropertyRef Name="Usuario"/></Key><Property Name="ILand1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Usuario" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Anunciante" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GetPais" sap:content-version="1">
+				<Key><PropertyRef Name="Usuario"/></Key><Property Name="Usuario" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ELines" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Landx" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GetAnunciantes" sap:content-version="1">
+				<Key><PropertyRef Name="ICliente"/><PropertyRef Name="ILand1"/></Key><Property Name="ICliente" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ILand1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Anunciante" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name1Anun" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GetCertificaciones" sap:content-version="1">
+				<Key><PropertyRef Name="ICliente"/><PropertyRef Name="ILand1"/></Key><Property Name="Desde" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IAnunciante" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Hasta" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="ICliente" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ILand1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Opubl" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ocomp" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kunag" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nknag" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Anunc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nnunc" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Arktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fmsrv" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tmsrv" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Descargado" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="GetCertificacionesPdf" m:HasStream="true" sap:content-version="1">
+				<Key><PropertyRef Name="IMimetype"/><PropertyRef Name="ICliente"/><PropertyRef Name="ILand1"/><PropertyRef Name="IOpubl"/></Key><Property Name="ECliente" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IMimetype" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EFilevalue" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="ICliente" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="ELand1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="ILand1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IOpubl" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZSCP_PORTAL_CLIENTES_HANA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ReadPdfServerSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.ReadPdfServer" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="GetUserSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.GetUser" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="GetPaisSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.GetPais" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="GetAnunciantesSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.GetAnunciantes" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="GetCertificacionesSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.GetCertificaciones" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="GetCertificacionesPdfSet" EntityType="ZSCP_PORTAL_CLIENTES_HANA_SRV.GetCertificacionesPdf" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZSCP_PORTAL_CLIENTES_HANA_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZSCP_PORTAL_CLIENTES_HANA_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
