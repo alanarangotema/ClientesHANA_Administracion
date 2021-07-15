@@ -10,7 +10,6 @@ sap.ui.define([
 			window.gOriginalData = null;	
 			
 			//Carga los datos de los usuarios en el modelo de la tabla
-
 			this.cargarDatos();
 
 		},
