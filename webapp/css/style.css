@@ -1,0 +1,86 @@
+.totalTabla{
+	font-size: 16px;
+}
+
+.sapMBtnInline{
+    height: 3rem;
+    margin: 0;
+    padding: 10px !important;
+    vertical-align: top;
+    border: none;
+    background-color: transparent;
+    min-width: 170px;
+    display: inline-block;
+}
+
+.sapMBtnBlock{
+    height: 3rem;
+    margin: 0;
+    padding: 10px !important;
+    vertical-align: top;
+    border: none;
+    background-color: transparent;
+    min-width: 170px;
+    display: block;
+}
+
+.label {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left !important;
+}
+
+.labelWarning {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left !important;
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
+.vBox {
+    display: inline-block;
+}
+
+.sapMBtnFloatRight {
+    height: 3rem;
+    margin: 0;
+    padding: 10px !important;
+    vertical-align: top;
+    border: none;
+    background-color: transparent;
+    min-width: 170px;
+    float:right;
+}
+
+.header {
+    padding: 10px !important;
+    font-size: large;
+	vertical-align: top;
+}
+
+.title {
+    padding: 10px !important;
+    font-size: large;
+	vertical-align: top;
+    text-align: left !important;
+}
+
+.labelFiltro {
+    padding: 10px;
+    padding-top: 15px;
+    text-align: left !important;
+    min-width: 170px;
+    width:15%;
+}
+
+.labelDocNoDesc {
+    padding: 10px;
+    padding-top: 15px;
+    text-align: right;
+    min-width: 170px;
+    width:15%;
+}
